@@ -1,0 +1,57 @@
+1.create tables customers(id,name,email,address,phone_number);
+
+
+2.insert into customers(id,name,email,address,phone_number)
+values( 1,
+    'shahbaz',
+    'jack@gmail.com',
+    'noida',
+    '9931797391')
+
+3.select * from customers' 
+4.SELECT Name,Email from Customers;
+5.SELECT * from Customers where ID = 3;
+6.SELECT * from Customers where Name LIKE 'A%';
+7.SELECT * FROM Customers
+ORDER BY Name DESC;
+8.UPDATE Customers
+SET Address = 'San Francisco'
+WHERE ID = 4;
+9.SELECT * FROM Customers
+ORDER BY ID
+LIMIT 5;
+10.DELETE FROM Customers
+WHERE ID = 2;
+11.SELECT COUNT() AS TotalCustomers FROM Customers;
+12.SELECT FROM Customers
+ORDER BY ID
+OFFSET 2;
+13.SELECT * FROM Customers
+WHERE ID > 2 AND Name LIKE 'B%';
+14.SELECT * FROM Customers
+WHERE ID < 3 OR Name LIKE '%s';
+15.SELECT * FROM Customers
+WHERE phone_number IS NULL OR phone_number = '';
+
+----------------------SET 2--------------------------------
+16.CREATE TABLE Restaurants (
+    ID INT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL,
+    Address VARCHAR(255),
+    Phone_Number VARCHAR(15),
+    Cuisine VARCHAR(100),
+    Rating DECIMAL(3, 1)
+);
+17.INSERT INTO Restaurants (ID, Name, Address, Phone_Number, Cuisine, Rating)
+VALUES
+    (1, 'Cafe Delight', '123 Main St', '555-1234', 'Cafe', 4.2),
+    (2, 'Pasta Paradise', '456 Elm St', '555-5678', 'Italian', 4.8),
+    (3, 'Sushi World', '789 Oak St', '555-9012', 'Japanese', 4.5),
+    (4, 'Burger Haven', '567 Maple St', '555-3456', 'American', 4.0),
+    (5, 'Taco Fiesta', '987 Pine St', '555-7890', 'Mexican', 4.7);
+18.SELECT * FROM Restaurants
+ORDER BY average_rating DESC;
+19.SELECT * FROM Restaurants
+WHERE delivery_available = true AND average_rating > 4;
+20.SELECT * FROM Restaurants
+WHERE cuisine_type IS NULL OR cuisine_type = '';
